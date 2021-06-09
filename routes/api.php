@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+Route::get('/apitest',function(){
+    return ['message' => 'ghello'];
+});*/
+Route::get('transactions','TransactionController@index');
+Route::get('transaction/{id}','TransactionController@show');
+Route::post('transaction','TransactionController@store');
+Route::put('transaction,TransactionController@store');
+Route::delete('transaction/{id}','TransactionController@destroy');
