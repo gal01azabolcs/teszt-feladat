@@ -92,7 +92,7 @@ class TransactionController extends Controller
     {   
         $transaction = Transaction::findOrFail($id);
         if($transaction->delete()){
-            return $article;
+            return $transaction;
         }
     }
 }
